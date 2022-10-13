@@ -1,0 +1,12 @@
+# Spring profile to send emails using Amazon SES
+spring:
+  mail: # this config autoconfigures spring mail
+    host: email-smtp.us-west-2.amazonaws.com
+    username: yourSesUserName
+    password: yourSesPassword  # generate app password following https://docs.aws.amazon.com/ses/latest/DeveloperGuide/verify-email-addresses.html
+    properties.mail.smtp:
+      port: 25
+      auth: true
+      starttls:
+        enable: true
+        required: true

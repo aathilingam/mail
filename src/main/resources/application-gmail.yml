@@ -1,0 +1,10 @@
+# Spring profile to send emails using Gmail SMTP
+spring:
+  mail: # this config autoconfigures spring mail
+    host: smtp.gmail.com
+    port: 587
+    username: yourEmailId@gmail.com
+    password: yourGeneratedAppPassword  # generate app password following https://support.google.com/accounts/answer/185833
+    properties.mail.smtp:
+      auth: true
+      starttls.enable: true

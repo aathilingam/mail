@@ -1,0 +1,9 @@
+server.servlet.context-path: "/v1"
+spring:
+  application:
+    name: "mail"
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+  profiles:
+    active: gmail
